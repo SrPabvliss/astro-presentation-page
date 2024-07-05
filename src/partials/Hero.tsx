@@ -5,59 +5,50 @@ import {
   Section,
 } from 'astro-boilerplate-components';
 
+import ProfilePhoto from '../images/ImgPerfilFix.jpg';
+
 const Hero = () => (
   <Section>
     <HeroAvatar
       title={
         <>
-          Hi there, I'm <GradientText>Ixartz</GradientText> 👋
+          Hi, I'm <GradientText>Pablo Villacrés</GradientText> 👋
         </>
       }
       description={
         <>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus{' '}
-          <a className="text-cyan-400 hover:underline" href="/">
-            malesuada
-          </a>{' '}
-          nisi tellus, non imperdiet nisi tempor at. Lorem ipsum dolor sit amet,{' '}
-          <a className="text-cyan-400 hover:underline" href="/">
-            consectetur
-          </a>{' '}
-          adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.
+          I'm a software developer passionate about enhancing my technical
+          skills and tackling new challenges. With expertise in{' '}
+          <GradientText>frontend</GradientText> and backend development, I have
+          experience working with technologies like{' '}
+          <GradientText> Next.js</GradientText>, Tailwind,{' '}
+          <GradientText>Nest.js</GradientText>, PostgreSQL, Docker, and
+          <GradientText> TypeScript</GradientText>. I'm always eager to learn
+          and grow in my field.
         </>
       }
       avatar={
-        <img
-          className="h-80 w-64"
-          src="/assets/images/avatar.svg"
-          alt="Avatar image"
-          loading="lazy"
-        />
+        <div className="flex justify-center">
+          <img
+            className="h-60 w-60 rounded-full border-4 border-sky-700 object-cover shadow-lg"
+            src={ProfilePhoto.src}
+            alt="Avatar image"
+            loading="lazy"
+          />
+        </div>
       }
       socialButtons={
         <>
-          <a href="/">
-            <HeroSocial
-              src="/assets/images/twitter-icon.png"
-              alt="Twitter icon"
-            />
-          </a>
-          <a href="/">
-            <HeroSocial
-              src="/assets/images/facebook-icon.png"
-              alt="Facebook icon"
-            />
-          </a>
-          <a href="/">
+          <a href="https://www.linkedin.com/in/pablo-villacres-26a060125/">
             <HeroSocial
               src="/assets/images/linkedin-icon.png"
-              alt="Linkedin icon"
+              alt="LinkedIn icon"
             />
           </a>
-          <a href="/">
+          <a href="https://github.com/SrPabvliss">
             <HeroSocial
-              src="/assets/images/youtube-icon.png"
-              alt="Youtube icon"
+              src="/assets/images/github-icon.png"
+              alt="Github icon"
             />
           </a>
         </>

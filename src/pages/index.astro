@@ -1,18 +1,17 @@
 ---
-import type { IFrontmatter } from 'astro-boilerplate-components';
-
-import { CTA } from '@/partials/CTA';
 import { Hero } from '@/partials/Hero';
-import { ProjectList } from '@/partials/ProjectList';
-import { RecentPosts } from '@/partials/RecentPosts';
-import { Sponsors } from '@/partials/Sponsors';
+// import { RecentPosts } from '@/partials/RecentPosts';
+import { Technologies } from '@/partials/Technologies';
 import Base from '@/templates/Base.astro';
 import { AppConfig } from '@/utils/AppConfig';
-import { sortByDate } from '@/utils/Posts';
 
-const allPosts = await Astro.glob<IFrontmatter>('./posts/*.md');
-const sortedPosts = sortByDate(allPosts);
-const lastThreePosts = sortedPosts.slice(0, 3);
+// import { sortByDate } from '@/utils/Posts';
+import { FeaturedProjectsSection } from '../partials/FeaturedProjectsSection';
+import { OtherProjectSection } from '../partials/OtherProjectSection';
+
+// const allPosts = await Astro.glob<IFrontmatter>('./posts/*.md');
+// const sortedPosts = sortByDate(allPosts);
+// const lastThreePosts = sortedPosts.slice(0, 3);
 
 const { title } = AppConfig;
 const { description } = AppConfig;
@@ -20,8 +19,9 @@ const { description } = AppConfig;
 
 <Base head={{ title, description }}>
   <Hero />
-  <Sponsors />
-  <ProjectList />
-  <RecentPosts postList={lastThreePosts} />
-  <CTA />
+  <Technologies />
+  <FeaturedProjectsSection />
+  <OtherProjectSection />
+  <!-- <RecentPosts postList={lastThreePosts} /> -->
+  <!-- <CTA /> -->
 </Base>
