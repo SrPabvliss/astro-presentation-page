@@ -1,0 +1,15 @@
+---
+import { getStaticPaths, getProjectById } from "@/projects/projectPaths";
+export { getStaticPaths };
+
+const { id } = Astro.params;
+const project = getProjectById(id);
+if (!project) throw new Error("Project not found");
+
+import { ProjectDetail } from "@/components/project-detail";
+import Layout from "@/layouts/Layout.astro";
+---
+<Layout>
+<ProjectDetail project={project} client:load />
+</Layout>
+

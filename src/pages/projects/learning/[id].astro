@@ -1,0 +1,14 @@
+---
+import { getStaticPaths, getLearningProjectById } from "@/projects/learningProjectPaths";
+export { getStaticPaths };
+
+const { id } = Astro.params;
+const project = getLearningProjectById(id);
+if (!project) throw new Error("Learning Project not found");
+
+import LearningProjectDetail from "@/components/project-detail/learning/detail";
+import Layout from "@/layouts/Layout.astro";
+---
+<Layout>
+  <LearningProjectDetail project={project} client:load />
+</Layout> 
