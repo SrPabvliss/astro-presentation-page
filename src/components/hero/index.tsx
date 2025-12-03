@@ -4,6 +4,7 @@ import { CLOUDINARY_IMAGES } from "@/constants/cloudinary";
 import SocialLinks from "./social-links";
 import WorkSection from "./work-section";
 import ContactButton from "./contact-button";
+import DownloadCvButton from "./download-cv-button";
 
 const Hero = () => {
 	return (
@@ -64,6 +65,7 @@ const Hero = () => {
 						<SocialLinks />
 						<div className="flex flex-wrap gap-4">
 							<ContactButton />
+							<DownloadCvButton />
 						</div>
 					</motion.div>
 				</div>
