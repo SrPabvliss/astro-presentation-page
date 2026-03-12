@@ -81,7 +81,7 @@ export default function ProjectFeatures({
                 />
                 <div className={`absolute inset-0 bg-gradient-to-tr ${index % 2 === 0 ? 'from-blue-900/30' : 'from-purple-900/30'} to-transparent`}></div>
                 <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300 flex items-center justify-center">
-                  <span className="text-white/0 group-hover:text-white/90 transition-colors duration-300 font-medium text-sm bg-black/50 px-3 py-1.5 rounded-full backdrop-blur-sm">
+                  <span className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 font-medium text-sm text-white/90 bg-black/50 px-3 py-1.5 rounded-full backdrop-blur-sm">
                     Click to enlarge
                   </span>
                 </div>
