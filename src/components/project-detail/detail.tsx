@@ -75,7 +75,10 @@ export default function ProjectDetailComponent({ project }: { project: DetailedP
 
         <ProjectFeatures id="features" features={project.keyFeatures} />
 
-        <ProjectStack id="stack" stack={project.technicalStack} />
+        <ProjectGallery
+          id="gallery"
+          screenshots={project.visualContent.screenshots as string[]}
+        />
 
         <ProjectTeam
           id="team"
@@ -83,14 +86,11 @@ export default function ProjectDetailComponent({ project }: { project: DetailedP
           team={project.projectRole.team}
         />
 
+        <ProjectStack id="stack" stack={project.technicalStack} />
+
         <ProjectChallenges id="challenges" challenges={project.challenges} />
 
         <ProjectLearnings id="learnings" learnings={project.learningOutcomes} />
-
-        <ProjectGallery
-          id="gallery"
-          screenshots={project.visualContent.screenshots as string[]}
-        />
 
         {/* Back to Projects and Demo Links */}
         <div className="container mx-auto px-4 flex flex-wrap gap-5 justify-center items-center mt-8">

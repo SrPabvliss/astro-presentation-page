@@ -58,16 +58,16 @@ export default function LearningProjectDetail({ project }: { project: LearningPr
       {project.overview && (
         <LearningOverview id="overview" overview={project.overview} />
       )}
-      {project.technicalStack && (
-        <div className="mt-12">
-          <ProjectStack id="stack" stack={project.technicalStack} />
-        </div>
-      )}
       <div className="py-16 space-y-16">
         {project.visualContent.screenshots?.length > 0 && (
           <ProjectGallery screenshots={project.visualContent.screenshots} id="gallery" />
         )}
       </div>
+      {project.technicalStack && (
+        <div className="mt-12 mb-16">
+          <ProjectStack id="stack" stack={project.technicalStack} />
+        </div>
+      )}
       <div className="container mx-auto px-4 flex flex-wrap gap-5 justify-center items-center mt-8 mb-10">
         {project.links?.demo && (
           <motion.a

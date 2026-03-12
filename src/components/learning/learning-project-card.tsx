@@ -15,7 +15,7 @@ const LearningProjectCard = ({
 			className="bg-zinc-900 border border-white/5 rounded-xl overflow-hidden transition-all"
 		>
 			<div className="relative w-full aspect-video">
-				<img src={image} alt={title}  className="absolute inset-0 w-full h-full object-cover" />
+				<img src={image} alt={title} loading="lazy" className="absolute inset-0 w-full h-full object-cover" />
 			</div>
 
 			<div className="p-4">

@@ -10,11 +10,11 @@ export const MAIN_NAV_ITEMS: readonly NavItem[] = [
 export const PROJECT_DETAIL_NAV_ITEMS: NavItem[] = [
 	{ id: "overview", name: "Overview", href: "#overview" },
 	{ id: "features", name: "Features", href: "#features" },
-	{ id: "stack", name: "Stack", href: "#stack" },
+	{ id: "gallery", name: "Gallery", href: "#gallery" },
 	{ id: "team", name: "My Role", href: "#team" },
+	{ id: "stack", name: "Stack", href: "#stack" },
 	{ id: "challenges", name: "Challenges", href: "#challenges" },
 	{ id: "learnings", name: "Learnings", href: "#learnings" },
-	{ id: "gallery", name: "Gallery", href: "#gallery" },
 ];
 
 export const PROJECTS_PAGE_NAV_ITEMS: NavItem[] = [
@@ -30,6 +30,6 @@ export const ABOUT_PAGE_NAV_ITEMS: NavItem[] = [
 
 export const LEARNING_PROJECT_DETAIL_NAV_ITEMS: NavItem[] = [
 	{ id: "overview", name: "Overview", href: "#overview" },
-	{ id: "stack", name: "Stack", href: "#stack" },
 	{ id: "gallery", name: "Gallery", href: "#gallery" },
+	{ id: "stack", name: "Stack", href: "#stack" },
 ];
